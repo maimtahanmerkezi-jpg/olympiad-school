@@ -10,7 +10,6 @@
 :root{--red:#b91c1c;--red-dark:#991b1b;--red-light:#fef2f2;--red-border:#fecaca}
 body{font-family:'Poppins',sans-serif;background:#f8faff;min-height:100vh;display:flex}
 
-/* SIDEBAR */
 .sidebar{width:240px;background:var(--red);min-height:100vh;padding:0;display:flex;flex-direction:column;flex-shrink:0;position:fixed;top:0;left:0;bottom:0;z-index:100;transition:transform .3s}
 .sidebar-brand{padding:24px 20px;border-bottom:1px solid rgba(255,255,255,0.12)}
 .brand-icon{width:40px;height:40px;background:rgba(255,255,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;margin-bottom:10px}
@@ -28,7 +27,6 @@ body{font-family:'Poppins',sans-serif;background:#f8faff;min-height:100vh;displa
 .admin-name{font-size:13px;font-weight:600;color:#fff}
 .admin-role{font-size:10px;color:rgba(255,255,255,0.5)}
 
-/* MAIN */
 .main{flex:1;margin-left:240px;display:flex;flex-direction:column;min-height:100vh}
 .topbar{background:#fff;border-bottom:1px solid #e8edf5;padding:0 24px;height:62px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
 .topbar-left{display:flex;align-items:center;gap:12px}
@@ -38,7 +36,6 @@ body{font-family:'Poppins',sans-serif;background:#f8faff;min-height:100vh;displa
 .date-chip{background:var(--red-light);border:1px solid var(--red-border);border-radius:8px;padding:5px 12px;font-size:12px;color:var(--red);font-weight:600;white-space:nowrap}
 .content{padding:20px 24px;flex:1}
 
-/* STATS */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
 .stat-card{background:#fff;border:1px solid #e8edf5;border-radius:14px;padding:16px;position:relative;overflow:hidden}
 .stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red)}
@@ -46,52 +43,34 @@ body{font-family:'Poppins',sans-serif;background:#f8faff;min-height:100vh;displa
 .stat-label{font-size:11px;color:#94a3b8;font-weight:500;margin-bottom:2px}
 .stat-value{font-size:26px;font-weight:800;color:#1e293b}
 
-/* VIEW TOGGLE */
 .view-card{background:#fff;border:1px solid #e8edf5;border-radius:16px;overflow:hidden}
-.view-head{padding:16px 20px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-wrap:gap}
+.view-head{padding:16px 20px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .view-title{font-size:14px;font-weight:700;color:#1e293b}
 .view-sub{font-size:11px;color:#94a3b8;margin-top:2px}
 
-/* MODE SWITCH */
 .mode-switch{display:flex;background:#f8faff;border:1px solid #e8edf5;border-radius:10px;padding:3px;gap:2px}
 .mode-btn{padding:6px 14px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;border:none;background:none;color:#64748b;font-family:'Poppins',sans-serif;white-space:nowrap;transition:all .15s}
 .mode-btn.active{background:var(--red);color:#fff}
 
-/* FILTER ROW */
 .filter-row{display:flex;gap:8px;padding:12px 20px;border-bottom:1px solid #f1f5f9;overflow-x:auto;flex-wrap:nowrap}
 .filter-chip{padding:6px 13px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid #e8edf5;background:#f8faff;color:#64748b;white-space:nowrap;transition:all .15s;font-family:'Poppins',sans-serif;flex-shrink:0}
 .filter-chip:hover{border-color:var(--red-border);color:var(--red)}
 .filter-chip.active{background:var(--red);color:#fff;border-color:var(--red)}
 
-/* CARD LIST VIEW (mobile-friendly) */
 .card-list{padding:12px 16px;display:flex;flex-direction:column;gap:10px}
-.day-group{margin-bottom:4px}
 .day-group-title{font-size:11px;font-weight:700;color:#94a3b8;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;padding:0 4px}
 .lesson-card{background:#f8faff;border:1px solid #e8edf5;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:12px;transition:border-color .15s}
 .lesson-card:hover{border-color:var(--red-border);background:var(--red-light)}
-.lc-time{font-size:12px;font-weight:700;color:var(--red);min-width:90px;flex-shrink:0}
+.lc-time{font-size:12px;font-weight:700;color:var(--red);min-width:100px;flex-shrink:0}
 .lc-body{flex:1;min-width:0}
 .lc-teacher{font-size:13px;font-weight:600;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .lc-subject{font-size:11px;color:#94a3b8;margin-top:1px}
 .lc-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0}
 .lc-room{background:var(--red-light);color:var(--red);font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px}
-.lc-day{font-size:10px;color:#94a3b8}
+.lc-group{font-size:10px;color:#94a3b8}
 
-/* TABLE VIEW */
-.table-wrap{overflow-x:auto}
-.sched-table{width:100%;border-collapse:collapse;min-width:600px;font-size:12px}
-.sched-table th{background:#f8faff;padding:9px 12px;font-size:11px;font-weight:600;color:#64748b;text-align:left;border-bottom:1px solid #e8edf5;white-space:nowrap}
-.sched-table td{padding:9px 12px;border-bottom:1px solid #f8fafc;vertical-align:middle}
-.sched-table tr:last-child td{border-bottom:none}
-.sched-table tr:hover td{background:#fefafa}
-.cell-block{display:flex;flex-direction:column}
-.cell-teacher{font-size:12px;font-weight:600;color:#1e293b}
-.cell-subject{font-size:10px;color:#94a3b8}
-.cell-badge{display:inline-block;background:var(--red-light);color:var(--red);font-size:10px;font-weight:600;padding:1px 7px;border-radius:5px;margin-top:3px}
-.empty-cell{color:#d1d5db;font-size:12px}
-.time-col{font-weight:700;color:#475569;white-space:nowrap;font-size:12px}
+.empty-state{padding:40px;text-align:center;color:#94a3b8;font-size:13px}
 
-/* OVERLAY */
 .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:90}
 .overlay.show{display:block}
 
@@ -103,7 +82,7 @@ body{font-family:'Poppins',sans-serif;background:#f8faff;min-height:100vh;displa
   .content{padding:14px 12px}
   .topbar{padding:0 14px}
   .menu-btn{display:flex}
-  .view-head{flex-direction:column;align-items:flex-start;gap:10px}
+  .view-head{flex-direction:column;align-items:flex-start}
   .mode-switch{width:100%}
   .mode-btn{flex:1;text-align:center}
 }
@@ -134,8 +113,10 @@ body{font-family:'Poppins',sans-serif;background:#f8faff;min-height:100vh;displa
   <div class="sidebar-footer">
     <div class="admin-card">
       <div class="admin-avatar">A</div>
-   <div class="admin-name">İlqar Aslanlı</div>
-<div class="admin-role">Direktor</div>
+      <div>
+        <div class="admin-name">İlqar Aslanlı</div>
+        <div class="admin-role">Direktor</div>
+      </div>
     </div>
   </div>
 </aside>
@@ -155,9 +136,9 @@ body{font-family:'Poppins',sans-serif;background:#f8faff;min-height:100vh;displa
   <div class="content">
     <div class="stats">
       <div class="stat-card"><div class="stat-icon">🎓</div><div class="stat-label">Aktiv Şagirdlər</div><div class="stat-value">428</div></div>
-      <div class="stat-card"><div class="stat-icon">👨‍🏫</div><div class="stat-label">Müəllimlər</div><div class="stat-value">24</div></div>
-      <div class="stat-card"><div class="stat-icon">🚪</div><div class="stat-label">Otaqlar</div><div class="stat-value">11</div></div>
-      <div class="stat-card"><div class="stat-icon">📚</div><div class="stat-label">Bu həftə dərslər</div><div class="stat-value">58</div></div>
+      <div class="stat-card"><div class="stat-icon">👨‍🏫</div><div class="stat-label">Müəllimlər</div><div class="stat-value" id="statTeachers">0</div></div>
+      <div class="stat-card"><div class="stat-icon">🚪</div><div class="stat-label">Otaqlar</div><div class="stat-value" id="statRooms">0</div></div>
+      <div class="stat-card"><div class="stat-icon">📚</div><div class="stat-label">Bu həftə dərslər</div><div class="stat-value" id="statLessons">0</div></div>
     </div>
 
     <div class="view-card">
@@ -172,7 +153,6 @@ body{font-family:'Poppins',sans-serif;background:#f8faff;min-height:100vh;displa
           <button class="mode-btn" onclick="setMode('teacher',this)">👨‍🏫 Müəllim</button>
         </div>
       </div>
-
       <div class="filter-row" id="filterRow"></div>
       <div id="scheduleContent"></div>
     </div>
@@ -180,45 +160,98 @@ body{font-family:'Poppins',sans-serif;background:#f8faff;min-height:100vh;displa
 </div>
 
 <script>
-const DAYS = ['Bazar ertəsi','Çərşənbə axşamı','Çərşənbə','Cümə axşamı','Cümə','Şənbə'];
-const SLOTS = ['09:00–10:30','10:30–12:00','12:00–13:30','13:30–15:00','15:00–16:30'];
-const TEACHERS = [
-  {name:'Nərmin müəllimə',   init:'L',  subject:'Riyaziyyat'},
-  {name:'Tural müəllim',   init:'Tu', subject:'Riyaziyyat və Məntiq'},
-  {name:'Aytac müəllimə',  init:'Ay', subject:'İngilis dili'},
-  {name:'Turan müəllim',   init:'Tr', subject:'Fizika'},
-  {name:'Aynur müəllimə',  init:'S',  subject:'İbtidai'},
-  {name:'Gülşən müəllimə',   init:'K',  subject:'Azərbaycan dili'},
-  {name:'Eliza müəllimə',   init:'R',  subject:'Rus dili'},
-  {name:'Könül müəllimə',   init:'O',  subject:'Azərbaycan dili'},
+// ============================================================
+// REAL SCHEDULE DATA
+// Hər dərs bir obyektdir:
+// {
+//   day:     'Bazar ertəsi',        // gün adı
+//   time:    '09:00–10:30',         // saat aralığı
+//   teacher: 'Nərmin müəllimə',     // müəllim adı
+//   subject: 'Riyaziyyat',          // fənn
+//   room:    'Otaq 1',              // otaq
+//   group:   '5A',                  // qrup (istəyə görə)
+// }
+// ============================================================
+
+const LESSONS = [
+  // ── TURAL SÜLEYMANOV (Riyaziyyat və Məntiq) ──
+  // 1-ci gün (Bazar ertəsi): 09:00–10:30 → 1,2,3-cü siniflər | 10:30–12:00 → 4,5-ci siniflər
+  { day:'Bazar ertəsi',       time:'09:00–10:30', teacher:'Tural Süleymanov', subject:'Riyaziyyat və Məntiq', room:'—', group:'1, 2, 3-cü siniflər' },
+  { day:'Bazar ertəsi',       time:'10:30–12:00', teacher:'Tural Süleymanov', subject:'Riyaziyyat və Məntiq', room:'—', group:'4, 5-ci siniflər' },
+  // 4-cü gün (Cümə axşamı): 09:00–10:30 → 1,2,3-cü siniflər | 10:30–12:00 → 4,5-ci siniflər
+  { day:'Cümə axşamı',        time:'09:00–10:30', teacher:'Tural Süleymanov', subject:'Riyaziyyat və Məntiq', room:'—', group:'1, 2, 3-cü siniflər' },
+  { day:'Cümə axşamı',        time:'10:30–12:00', teacher:'Tural Süleymanov', subject:'Riyaziyyat və Məntiq', room:'—', group:'4, 5-ci siniflər' },
+
+  // ── AYTAC MÜƏLLİMƏ (İngilis dili) ──
+  // 4,5-ci günlər (Cümə axşamı, Cümə): 14:00–15:30 → Zarema x.
+  { day:'Cümə axşamı',        time:'14:00–15:30', teacher:'Aytac müəllimə',   subject:'İngilis dili',        room:'—', group:'Zarema x.' },
+  { day:'Cümə',               time:'14:00–15:30', teacher:'Aytac müəllimə',   subject:'İngilis dili',        room:'—', group:'Zarema x.' },
+
+  // ── AYNUR MÜƏLLİMƏ (İbtidai) ──
+  // 1,3,5-ci günlər: 14:00–15:00 → Uğur
+  { day:'Bazar ertəsi',       time:'14:00–15:00', teacher:'Aynur müəllimə',   subject:'İbtidai',             room:'—', group:'Uğur' },
+  { day:'Çərşənbə',           time:'14:00–15:00', teacher:'Aynur müəllimə',   subject:'İbtidai',             room:'—', group:'Uğur' },
+  { day:'Cümə',               time:'14:00–15:00', teacher:'Aynur müəllimə',   subject:'İbtidai',             room:'—', group:'Uğur' },
+
+  // ── ELZA MÜƏLLİMƏ (Rus dili) ──
+  // 6-cı gün (Şənbə): 15:00–16:30 → Əli, Həsən | 16:30–18:00 → İlkin
+  { day:'Şənbə',              time:'15:00–16:30', teacher:'Elza müəllimə',    subject:'Rus dili',            room:'—', group:'Əli, Həsən' },
+  { day:'Şənbə',              time:'16:30–18:00', teacher:'Elza müəllimə',    subject:'Rus dili',            room:'—', group:'İlkin' },
+
+  // ── NƏRMİN MÜƏLLİMƏ (Riyaziyyat) ──
+  // 1,5-ci günlər: 09:00–10:20 → Yusif
+  { day:'Bazar ertəsi',       time:'09:00–10:20', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'—', group:'Yusif' },
+  { day:'Cümə',               time:'09:00–10:20', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'—', group:'Yusif' },
+  // 1,5-ci günlər: 10:30–12:00 → Ağasu
+  { day:'Bazar ertəsi',       time:'10:30–12:00', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'—', group:'Ağasu' },
+  { day:'Cümə',               time:'10:30–12:00', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'—', group:'Ağasu' },
+  // 1-ci gün: 15:00–16:30 → Gülçin
+  { day:'Bazar ertəsi',       time:'15:00–16:30', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'—', group:'Gülçin' },
+  // 4-cü gün: 13:30–15:00 → Gülçin
+  { day:'Cümə axşamı',        time:'13:30–15:00', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'—', group:'Gülçin' },
+
+  // ── GÜLŞƏN MÜƏLLİMƏ (Azərbaycan dili) ──
+  // 1-ci gün: 15:00–16:30 → Hacumur
+  { day:'Bazar ertəsi',       time:'15:00–16:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'—', group:'Hacumur' },
+  // 4-cü gün: 14:00–15:30 → Hacumur
+  { day:'Cümə axşamı',        time:'14:00–15:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'—', group:'Hacumur' },
+  // 2,4-cü günlər: 10:00–11:30 → Ağası
+  { day:'Çərşənbə axşamı',    time:'10:00–11:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'—', group:'Ağası' },
+  { day:'Cümə axşamı',        time:'10:00–11:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'—', group:'Ağası' },
+  // 3-cü gün: 16:00–17:30 → Leyla, Elmir, Şölə
+  { day:'Çərşənbə',           time:'16:00–17:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'—', group:'Leyla, Elmir, Şölə' },
+  // 6-cı gün: 11:00–12:30 → Leyla, Elmir, Şölə
+  { day:'Şənbə',              time:'11:00–12:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'—', group:'Leyla, Elmir, Şölə' },
+
+  // ── TURAN MÜƏLLİMƏ (Fizika) ──
+  // 3,5-ci günlər: 13:30–15:00 → Rəhim, Musa
+  { day:'Çərşənbə',           time:'13:30–15:00', teacher:'Turan müəllimə',   subject:'Fizika',              room:'—', group:'Rəhim, Musa' },
+  { day:'Cümə',               time:'13:30–15:00', teacher:'Turan müəllimə',   subject:'Fizika',              room:'—', group:'Rəhim, Musa' },
+
+  // ── KÖNÜL MÜƏLLİMƏ (Azərbaycan dili) ──
+  // 3,6-cı günlər: 12:00–13:30 → Musa, Rəhim, Anar
+  { day:'Çərşənbə',           time:'12:00–13:30', teacher:'Könül müəllimə',   subject:'Azərbaycan dili',     room:'—', group:'Musa, Rəhim, Anar' },
+  { day:'Şənbə',              time:'12:00–13:30', teacher:'Könül müəllimə',   subject:'Azərbaycan dili',     room:'—', group:'Musa, Rəhim, Anar' },
 ];
 
-// Generate schedule: days[d][slot][room] = teacher index or null
-const schedule = [];
-for(let d=0;d<6;d++){
-  const dayData=[];
-  for(let s=0;s<5;s++){
-    const rooms=new Array(11).fill(null);
-    const busy = 9 + Math.floor(Math.random()*2);
-    const usedT=new Set();
-    const roomIdxs=[...Array(11).keys()].sort(()=>Math.random()-.5).slice(0,busy);
-    let ti=0;
-    roomIdxs.forEach(r=>{
-      // find unused teacher
-      while(ti<TEACHERS.length && usedT.has(ti)) ti++;
-      if(ti<TEACHERS.length){ rooms[r]=ti; usedT.add(ti); ti++; }
-    });
-    dayData.push(rooms);
-  }
-  schedule.push(dayData);
-}
+// ============================================================
+// Sabit siyahılar — LESSONS-dan avtomatik çıxarılır
+// ============================================================
+const DAYS    = ['Bazar ertəsi','Çərşənbə axşamı','Çərşənbə','Cümə axşamı','Cümə','Şənbə'];
+const ROOMS   = [...new Set(LESSONS.map(l=>l.room))].sort();
+const TEACHERS= [...new Set(LESSONS.map(l=>l.teacher))].sort();
 
-let currentMode='day';
-let currentFilter=0;
+// stat kartları yenilə
+document.getElementById('statTeachers').textContent = TEACHERS.length || '—';
+document.getElementById('statRooms').textContent    = ROOMS.length    || '—';
+document.getElementById('statLessons').textContent  = LESSONS.length  || '—';
+
+let currentMode  = 'day';
+let currentFilter = 0;
 
 function setMode(mode, btn){
-  currentMode=mode;
-  currentFilter=0;
+  currentMode   = mode;
+  currentFilter = 0;
   document.querySelectorAll('.mode-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   renderFilters();
@@ -226,114 +259,82 @@ function setMode(mode, btn){
 }
 
 function renderFilters(){
-  const row=document.getElementById('filterRow');
-  let items=[];
-  if(currentMode==='day') items=DAYS;
-  else if(currentMode==='room') items=Array.from({length:11},(_,i)=>'Otaq '+(i+1));
-  else items=TEACHERS.map(t=>t.name);
-  row.innerHTML=items.map((item,i)=>
+  const row   = document.getElementById('filterRow');
+  const items = currentMode==='day' ? DAYS : currentMode==='room' ? ROOMS : TEACHERS;
+  row.innerHTML = items.map((item,i)=>
     `<button class="filter-chip ${i===currentFilter?'active':''}" onclick="selectFilter(${i},this)">${item}</button>`
   ).join('');
 }
 
 function selectFilter(idx, el){
-  currentFilter=idx;
+  currentFilter = idx;
   document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
   el.classList.add('active');
   renderContent();
 }
 
+function cardHTML(l){
+  return `<div class="lesson-card">
+    <div class="lc-time">${l.time}</div>
+    <div class="lc-body">
+      <div class="lc-teacher">${l.teacher}</div>
+      <div class="lc-subject">${l.subject}</div>
+    </div>
+    <div class="lc-right">
+      <div class="lc-room">${l.room}</div>
+      ${l.group ? `<div class="lc-group">${l.group}</div>` : ''}
+    </div>
+  </div>`;
+}
+
 function renderContent(){
-  if(currentMode==='day') renderDayView();
-  else if(currentMode==='room') renderRoomView();
-  else renderTeacherView();
-}
+  const content = document.getElementById('scheduleContent');
 
-function renderDayView(){
-  const d=currentFilter;
-  const content=document.getElementById('scheduleContent');
-  let html='<div class="card-list">';
-  SLOTS.forEach((slot,s)=>{
-    const lessons=[];
-    schedule[d][s].forEach((t,r)=>{
-      if(t!==null) lessons.push({teacher:TEACHERS[t],room:r+1,slot});
-    });
-    if(lessons.length===0) return;
-    html+=`<div class="day-group-title">${slot}</div>`;
-    lessons.forEach(l=>{
-      html+=`<div class="lesson-card">
-        <div class="lc-time">${l.slot}</div>
-        <div class="lc-body">
-          <div class="lc-teacher">${l.teacher.name}</div>
-          <div class="lc-subject">${l.teacher.subject}</div>
-        </div>
-        <div class="lc-right">
-          <div class="lc-room">Otaq ${l.room}</div>
-        </div>
-      </div>`;
-    });
-  });
-  html+='</div>';
-  content.innerHTML=html;
-}
+  if(LESSONS.length===0){
+    content.innerHTML='<div class="empty-state">📭 Cədvəl hələ daxil edilməyib</div>';
+    return;
+  }
 
-function renderRoomView(){
-  const r=currentFilter;
-  const content=document.getElementById('scheduleContent');
-  let html='<div class="card-list">';
-  DAYS.forEach((day,d)=>{
-    const dayLessons=[];
-    SLOTS.forEach((slot,s)=>{
-      const t=schedule[d][s][r];
-      if(t!==null) dayLessons.push({teacher:TEACHERS[t],slot,s});
+  if(currentMode==='day'){
+    const day = DAYS[currentFilter];
+    const dayLessons = LESSONS.filter(l=>l.day===day)
+      .sort((a,b)=>a.time.localeCompare(b.time));
+    if(!dayLessons.length){ content.innerHTML='<div class="empty-state">Bu gün dərs yoxdur</div>'; return; }
+    // saata görə qruplaşdır
+    const byTime = {};
+    dayLessons.forEach(l=>{ (byTime[l.time]=byTime[l.time]||[]).push(l); });
+    let html='<div class="card-list">';
+    Object.entries(byTime).forEach(([time,lessons])=>{
+      html+=`<div class="day-group-title">${time}</div>`;
+      lessons.forEach(l=>{ html+=cardHTML(l); });
     });
-    if(dayLessons.length===0) return;
-    html+=`<div class="day-group-title">${day}</div>`;
-    dayLessons.forEach(l=>{
-      html+=`<div class="lesson-card">
-        <div class="lc-time">${l.slot}</div>
-        <div class="lc-body">
-          <div class="lc-teacher">${l.teacher.name}</div>
-          <div class="lc-subject">${l.teacher.subject}</div>
-        </div>
-        <div class="lc-right">
-          <div class="lc-room">Otaq ${r+1}</div>
-        </div>
-      </div>`;
-    });
-  });
-  html+='</div>';
-  content.innerHTML=html;
-}
+    html+='</div>';
+    content.innerHTML=html;
 
-function renderTeacherView(){
-  const ti=currentFilter;
-  const content=document.getElementById('scheduleContent');
-  let html='<div class="card-list">';
-  DAYS.forEach((day,d)=>{
-    const dayLessons=[];
-    SLOTS.forEach((slot,s)=>{
-      schedule[d][s].forEach((t,r)=>{
-        if(t===ti) dayLessons.push({slot,room:r+1});
-      });
-    });
-    if(dayLessons.length===0) return;
-    html+=`<div class="day-group-title">${day}</div>`;
-    dayLessons.forEach(l=>{
-      html+=`<div class="lesson-card">
-        <div class="lc-time">${l.slot}</div>
-        <div class="lc-body">
-          <div class="lc-teacher">${TEACHERS[ti].name}</div>
-          <div class="lc-subject">${TEACHERS[ti].subject}</div>
-        </div>
-        <div class="lc-right">
-          <div class="lc-room">Otaq ${l.room}</div>
-        </div>
-      </div>`;
-    });
-  });
-  html+='</div>';
-  content.innerHTML=html;
+  } else if(currentMode==='room'){
+    const room = ROOMS[currentFilter];
+    const roomLessons = LESSONS.filter(l=>l.room===room)
+      .sort((a,b)=>DAYS.indexOf(a.day)-DAYS.indexOf(b.day)||a.time.localeCompare(b.time));
+    if(!roomLessons.length){ content.innerHTML='<div class="empty-state">Bu otaqda dərs yoxdur</div>'; return; }
+    const byDay = {};
+    roomLessons.forEach(l=>{ (byDay[l.day]=byDay[l.day]||[]).push(l); });
+    let html='<div class="card-list">';
+    DAYS.forEach(day=>{ if(!byDay[day]) return; html+=`<div class="day-group-title">${day}</div>`; byDay[day].forEach(l=>{ html+=cardHTML(l); }); });
+    html+='</div>';
+    content.innerHTML=html;
+
+  } else {
+    const teacher = TEACHERS[currentFilter];
+    const tLessons = LESSONS.filter(l=>l.teacher===teacher)
+      .sort((a,b)=>DAYS.indexOf(a.day)-DAYS.indexOf(b.day)||a.time.localeCompare(b.time));
+    if(!tLessons.length){ content.innerHTML='<div class="empty-state">Bu müəllimin dərsi yoxdur</div>'; return; }
+    const byDay = {};
+    tLessons.forEach(l=>{ (byDay[l.day]=byDay[l.day]||[]).push(l); });
+    let html='<div class="card-list">';
+    DAYS.forEach(day=>{ if(!byDay[day]) return; html+=`<div class="day-group-title">${day}</div>`; byDay[day].forEach(l=>{ html+=cardHTML(l); }); });
+    html+='</div>';
+    content.innerHTML=html;
+  }
 }
 
 function toggleSidebar(){
@@ -344,7 +345,6 @@ function closeSidebar(){
   document.getElementById('sidebar').classList.remove('open');
   document.getElementById('overlay').classList.remove('show');
 }
-
 document.querySelectorAll('.nav-item').forEach(btn=>{
   btn.addEventListener('click',function(){
     document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
