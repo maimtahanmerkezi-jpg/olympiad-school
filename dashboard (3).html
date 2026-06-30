@@ -175,74 +175,83 @@ body{font-family:'Poppins',sans-serif;background:#f8faff;min-height:100vh;displa
 
 const LESSONS = [
   // ── TURAL SÜLEYMANOV (Riyaziyyat və Məntiq) ──
-  // 1-ci gün (Bazar ertəsi): 09:00–10:30 → Ibtidai siniflər | 10:30–12:00 → 4,5-ci siniflər
+  
   { day:'Bazar ertəsi',       time:'09:00–10:30', teacher:'Tural Süleymanov', subject:'Riyaziyyat və Məntiq', room:'3', group:'Ibtidai' },
   { day:'Bazar ertəsi',       time:'10:30–12:00', teacher:'Tural Süleymanov', subject:'Riyaziyyat və Məntiq', room:'3', group:'5-7-ci siniflər' },
-  // 2-ci gün (Çərşənbə axşamı): 09:00–10:30 → 5-7-ci siniflər  | 10:30–12:00 → İbtidai siniflər
+  
   { day:'Çərşənbə axşamı',    time:'09:00–10:30', teacher:'Tural Süleymanov', subject:'Riyaziyyat və Məntiq', room:'3', group:'5-7-ci siniflər' },
   { day:'Çərşənbə axşamı',    time:'10:30–12:00', teacher:'Tural Süleymanov', subject:'Riyaziyyat və Məntiq', room:'3', group:'Ibtidai' },
-  // 4-cü gün (Cümə axşamı): 09:00–10:30 → 1,2,3-cü siniflər | 10:30–12:00 → 4,5-ci siniflər
+ 
   { day:'Cümə axşamı',        time:'09:00–10:30', teacher:'Tural Süleymanov', subject:'Riyaziyyat və Məntiq', room:'3', group:'Ibtidai' },
   { day:'Cümə axşamı',        time:'10:30–12:00', teacher:'Tural Süleymanov', subject:'Riyaziyyat və Məntiq', room:'3', group:'5-7-ci siniflər' },
-  // 5-ci gün (Cümə): 09:00–10:30 → 5-7-ci siniflər  | 10:30–12:00 → İbtidai siniflər
+
   { day:'Çərşənbə axşamı',    time:'09:00–10:30', teacher:'Tural Süleymanov', subject:'Riyaziyyat və Məntiq', room:'3', group:'5-7-ci siniflər' },
   { day:'Çərşənbə axşamı',    time:'10:30–12:00', teacher:'Tural Süleymanov', subject:'Riyaziyyat və Məntiq', room:'3', group:'Ibtidai' },
   
   // ── AYTAC MÜƏLLİMƏ (İngilis dili) ──
-  // 3,5-ci günlər (Çərşnbə, Cümə): 09:00–15: → Məktəbli, İbtidai, Böyük.
+ 
   { day:'Çərşənbə',           time:'09:30-11:00', teacher:'Aytac müəllimə',   subject:'İngilis dili',        room:'4', group:'Məktəblilər' },
   { day:'Çərşənbə',           time:'11:00-12:30', teacher:'Aytac müəllimə',   subject:'İngilis dili',        room:'4', group:'İbtidai' },
   { day:'Çərşənbə',           time:'13:30-15:00', teacher:'Aytac müəllimə',   subject:'İngilis dili',        room:'4', group:'Böyüklər' },
-  { day:'Cümə',           time:'09:30-11:00', teacher:'Aytac müəllimə',   subject:'İngilis dili',        room:'4', group:'Məktəblilər' },
-  { day:'Cümə',           time:'11:00-12:30', teacher:'Aytac müəllimə',   subject:'İngilis dili',        room:'4', group:'İbtidai' },
-  { day:'Cümə',           time:'13:30-15:00', teacher:'Aytac müəllimə',   subject:'İngilis dili',        room:'4', group:'Böyüklər' },
  
+  { day:'Cümə',               time:'09:30-11:00', teacher:'Aytac müəllimə',   subject:'İngilis dili',        room:'4', group:'Məktəblilər' },
+  { day:'Cümə',               time:'11:00-12:30', teacher:'Aytac müəllimə',   subject:'İngilis dili',        room:'4', group:'İbtidai' },
+  { day:'Cümə',               time:'13:30-15:00', teacher:'Aytac müəllimə',   subject:'İngilis dili',        room:'4', group:'Böyüklər' },
  
-  // ── AYNUR MÜƏLLİMƏ (İbtidai) ──
-  // 1,3,5-ci günlər: 14:00–15:00 → Uğur
-  { day:'Bazar ertəsi',       time:'14:00–15:00', teacher:'Aynur müəllimə',   subject:'İbtidai',             room:'—', group:'Uğur' },
-  { day:'Çərşənbə',           time:'14:00–15:00', teacher:'Aynur müəllimə',   subject:'İbtidai',             room:'—', group:'Uğur' },
-  { day:'Cümə',               time:'14:00–15:00', teacher:'Aynur müəllimə',   subject:'İbtidai',             room:'—', group:'Uğur' },
-
   // ── ELZA MÜƏLLİMƏ (Rus dili) ──
-  // 6-cı gün (Şənbə): 15:00–16:30 → Əli, Həsən | 16:30–18:00 → İlkin
-  { day:'Şənbə',              time:'15:00–16:30', teacher:'Elza müəllimə',    subject:'Rus dili',            room:'—', group:'Əli, Həsən' },
-  { day:'Şənbə',              time:'16:30–18:00', teacher:'Elza müəllimə',    subject:'Rus dili',            room:'—', group:'İlkin' },
+ 
+  { day:'Şənbə',              time:'15:00–16:30', teacher:'Elza müəllimə',    subject:'Rus dili',            room:'2', group:'Əli, Həsən' },
+  { day:'Şənbə',              time:'16:30–18:00', teacher:'Elza müəllimə',    subject:'Rus dili',            room:'2', group:'İlkin' },
 
   // ── NƏRMİN MÜƏLLİMƏ (Riyaziyyat) ──
-  // 1,5-ci günlər: 09:00–10:20 → Yusif
-  { day:'Bazar ertəsi',       time:'09:00–10:20', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'—', group:'Yusif' },
-  { day:'Cümə',               time:'09:00–10:20', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'—', group:'Yusif' },
-  // 1,5-ci günlər: 10:30–12:00 → Ağasu
-  { day:'Bazar ertəsi',       time:'10:30–12:00', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'—', group:'Ağasu' },
-  { day:'Cümə',               time:'10:30–12:00', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'—', group:'Ağasu' },
-  // 1-ci gün: 15:00–16:30 → Gülçin
-  { day:'Bazar ertəsi',       time:'15:00–16:30', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'—', group:'Gülçin' },
-  // 4-cü gün: 13:30–15:00 → Gülçin
-  { day:'Cümə axşamı',        time:'13:30–15:00', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'—', group:'Gülçin' },
-
+ 
+  { day:'Bazar ertəsi',       time:'09:00–10:30', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'6', group:'fərdi' },
+  { day:'Bazar ertəsi',       time:'10:30–12:00', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'6', group:'məktəbli 1' },
+  { day:'Bazar ertəsi',       time:'15:30–17:00', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'6', group:'məktəbli 2' },
+  
+  { day:'Çərşənbə',           time:'09:00–10:30', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'6', group:'fərdi' },
+ 
+  { day:'Cümə axşamı',        time:'09:30–11:00', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'6', group:'məktəbli 1 },
+  { day:'Cümə axşamı',        time:'14:00–15:30', teacher:'Nərmin müəllimə',  subject:'Riyaziyyat',          room:'6', group:'məktəbli 2' },
+  
   // ── GÜLŞƏN MÜƏLLİMƏ (Azərbaycan dili) ──
-  // 1-ci gün: 15:00–16:30 → Hacumur
-  { day:'Bazar ertəsi',       time:'15:00–16:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'—', group:'Hacumur' },
-  // 4-cü gün: 14:00–15:30 → Hacumur
-  { day:'Cümə axşamı',        time:'14:00–15:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'—', group:'Hacumur' },
-  // 2,4-cü günlər: 10:00–11:30 → Ağası
-  { day:'Çərşənbə axşamı',    time:'10:00–11:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'—', group:'Ağası' },
-  { day:'Cümə axşamı',        time:'10:00–11:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'—', group:'Ağası' },
-  // 3-cü gün: 16:00–17:30 → Leyla, Elmir, Şölə
-  { day:'Çərşənbə',           time:'16:00–17:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'—', group:'Leyla, Elmir, Şölə' },
-  // 6-cı gün: 11:00–12:30 → Leyla, Elmir, Şölə
-  { day:'Şənbə',              time:'11:00–12:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'—', group:'Leyla, Elmir, Şölə' },
+ 
+  { day:'Bazar ertəsi',       time:'09:30–11:00', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'2', group:'abituriyent' },
+  { day:'Bazar ertəsi',       time:'11:00–12:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'2', group:'lisey / gimnaziya' },
 
-  // ── TURAN MÜƏLLİMƏ (Fizika) ──
-  // 3,5-ci günlər: 13:30–15:00 → Rəhim, Musa
-  { day:'Çərşənbə',           time:'13:30–15:00', teacher:'Turan müəllimə',   subject:'Fizika',              room:'—', group:'Rəhim, Musa' },
-  { day:'Cümə',               time:'13:30–15:00', teacher:'Turan müəllimə',   subject:'Fizika',              room:'—', group:'Rəhim, Musa' },
+  { day:'Çərşənbə',           time:'09:30–11:00', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'2', group:'abituriyent' },
+  { day:'Çərşənbə',           time:'11:00–12:30', teacher:'Gülşən müəllimə',  subject:'Azərbaycan dili',     room:'2', group:'lisey / gimnaziya' },
 
+  // ── AYTAC MÜƏLLİMƏ (İBTİDAİ) ──
+ 
+  { day:'Bazar ertəsi',       time:'14:00–15:30', teacher:'Aytac müəllimə (İbtidai)',  subject:'İbtidai',     room:'2', group:'ibtidai' },
+  { day:'Bazar ertəsi',       time:'09:00–10:15', teacher:'Aytac müəllimə (İbtidai)',  subject:'İbtidai',     room:'5', group:'yay məktəbi' },
+
+  { day:'Çərşənbə',           time:'09:00–10:15', teacher:'Aytac müəllimə (İbtidai)',  subject:'İbtidai',     room:'5', group:'yay məktəbi' },
+  { day:'Çərşənbə',           time:'14:00–15:30', teacher:'Aytac müəllimə (İbtidai)',  subject:'İbtidai',     room:'2', group:'ibtidai' },
+ 
+  { day:'Cümə',               time:'14:00–15:30', teacher:'Aytac müəllimə (İbtidai)',  subject:'İbtidai',     room:'2', group:'ibtidai' },
+
+  
+
+   // ── ŞƏHANƏ MÜƏLLİMƏ ──
+
+   { day:'Çərşənbə axşamı',    time:'16:00–18:00', teacher:'Şəhanə Müəllimə', subject:'Məktəbəqədər', room:'3', group:'məktəbəqədər' },
+   
+   { day:'Cümə axşamı',        time:'16:00–18:00', teacher:'Şəhanə Müəllimə', subject:'Məktəbəqədər', room:'3', group:'məktəbəqədər' },
+   
+ // ── MƏHƏMMƏD MÜƏLLİM ── 
+  
+  { day:'Bazar ertəsi',       time:'11:00–12:00', teacher:'Məhəmməd müəllimə',  subject:'Şamat',     room:'5', group:'yay məktəbi' },
+  
+  { day:'Cümə',               time:'09:00–11:30', teacher:'Məhəmməd müəllimə',  subject:'Şamat',     room:'5', group:'yay məktəbi' },
+ 
+ 
   // ── KÖNÜL MÜƏLLİMƏ (Azərbaycan dili) ──
-  // 3,6-cı günlər: 12:00–13:30 → Musa, Rəhim, Anar
-  { day:'Çərşənbə',           time:'12:00–13:30', teacher:'Könül müəllimə',   subject:'Azərbaycan dili',     room:'—', group:'Musa, Rəhim, Anar' },
-  { day:'Şənbə',              time:'12:00–13:30', teacher:'Könül müəllimə',   subject:'Azərbaycan dili',     room:'—', group:'Musa, Rəhim, Anar' },
+
+  { day:'Çərşənbə',           time:'12:00–13:00', teacher:'Könül müəllimə',   subject:'Azərbaycan dili',     room:'3', group:'fərdi' },
+ 
+  { day:'Şənbə',              time:'12:00–13:00', teacher:'Könül müəllimə',   subject:'Azərbaycan dili',     room:'3', group:'fərdi' },
 ];
 
 // ============================================================
